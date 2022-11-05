@@ -7,6 +7,9 @@ function Taylor(;id, kwargs...)
     return Taylor(id, Card[])
 end
 
+function setup!(player::Taylor, ids)
+    return nothing
+end
 
 function process_exchange!(player::Taylor, inquirer_id, opponent_id, value, cards)
     return nothing

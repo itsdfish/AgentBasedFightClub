@@ -7,6 +7,9 @@ function Mary(;id, kwargs...)
     return Mary(id, Card[])
 end
 
+function setup!(player::Mary, ids)
+    return nothing
+end
 
 function process_exchange!(player::Mary, inquirer_id, opponent_id, value, cards)
     return nothing

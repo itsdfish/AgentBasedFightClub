@@ -10,6 +10,10 @@ function Example(;id, ids)
     return Example(id, Card[], memory)
 end
 
+function setup!(player::Example, ids)
+    return nothing
+end
+
 function process_exchange!(player::Example, inquirer_id, opponent_id, value, cards)
     player.memory[inquirer_id][value] = true
     player.memory[opponent_id][value] = false

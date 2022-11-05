@@ -3,6 +3,7 @@ module AgentBasedFightClub
     import GoFish: process_exchange!
     import GoFish: process_go_fish!
     import GoFish: process_books! 
+    import GoFish: setup!
     import GoFish: decide
     export Chris
     export Dad 

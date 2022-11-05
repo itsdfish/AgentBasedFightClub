@@ -7,6 +7,9 @@ function Chris(;id, kwargs...)
     return Chris(id, Card[])
 end
 
+function setup!(player::Chris, ids)
+    return nothing
+end
 
 function process_exchange!(player::Chris, inquirer_id, opponent_id, value, cards)
     return nothing
