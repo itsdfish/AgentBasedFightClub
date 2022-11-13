@@ -12,6 +12,7 @@ Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 
 [compat]
 Distributions = "0.25.0"
+GoFish = "0.1"
 HypothesisTests = "0.10.0"
 Revise = "3.4.0"
 julia = "1"
