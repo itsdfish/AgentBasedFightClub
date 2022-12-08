@@ -16,7 +16,7 @@ using HypothesisTests
 ids = (:Joy,:Bernice)
 types = (Example,Example)
 # optional keyword argumens for each player 
-args = ((),())
+args = ((;ids),(;ids))
 # number of games
 n_games = 100
 ############################################################################################################

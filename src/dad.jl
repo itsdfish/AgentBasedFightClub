@@ -20,7 +20,7 @@ function process_books!(player::Dad, book_map)
     return nothing
 end
 
-function process_go_fish!(player::Dad, inquirer_id)
+function process_go_fish!(player::Dad, inquirer_id, n_cards)
     
     return nothing
 end

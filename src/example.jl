@@ -28,8 +28,7 @@ function process_books!(player::Example, book_map)
     return nothing
 end
 
-function process_go_fish!(player::Example, inquirer_id)
-    # NA
+function process_go_fish!(player::Example, inquirer_id, n_cards)
     return nothing
 end
 

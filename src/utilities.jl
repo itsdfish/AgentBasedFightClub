@@ -1,5 +1,5 @@
 function battle!(results; ids, types, args)
-    players = Dict(id => t(;id, ids, a...) for (t,id,a) in zip(types,ids,args))
+    players = Dict(id => t(;id, a...) for (t,id,a) in zip(types,ids,args))
     game = Game(ids)
     deal!(game, players)
     simulate!(game, players)

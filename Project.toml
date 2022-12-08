@@ -4,16 +4,20 @@ authors = ["itsdfish and contributors"]
 version = "0.1.0"
 
 [deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 GoFish = "d00ce6d8-e47b-41eb-9812-442785832f3b"
 HypothesisTests = "09f84164-cd44-5f33-b23f-e6b0d136a0d5"
+PlayingCards52 = "c2ceccfa-fa3a-4f0d-8d5f-27465c1854bf"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+SafeTestsets = "1bc83da4-3b8d-516f-aca4-4fe02f6d838f"
 
 [compat]
 Distributions = "0.25.0"
 HypothesisTests = "0.10.0"
 Revise = "3.4.0"
+GoFish = "0.2.0"
 julia = "1"
 
 [extras]
