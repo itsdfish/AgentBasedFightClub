@@ -8,6 +8,7 @@ module AgentBasedFightClub
 
     export Chris
     export Dad 
+    export DFish
     export Guesser
     export Mary
 
@@ -16,6 +17,7 @@ module AgentBasedFightClub
 
     include("dad.jl")
     include("chris.jl")
+    include("dfish.jl")
     include("mary.jl")
     include("guesser.jl")
     include("utilities.jl")

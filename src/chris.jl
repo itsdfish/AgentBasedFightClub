@@ -42,7 +42,7 @@ function find_match(player::Chris, ids::T) where T
     matching_card = Int[]
     matching_id = T()
     for id ∈ ids 
-        id == player.id ? break : nothing 
+        id == player.id ? continue : nothing 
         for card ∈ player.cards
             if memory[id][card.rnk] 
                 push!(matching_card, card.rnk)
