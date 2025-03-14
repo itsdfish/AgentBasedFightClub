@@ -1,26 +1,34 @@
-mutable struct Chris{T} <: AbstractPlayer
+mutable struct DFish{T} <: AbstractPlayer
     id::T 
     cards::Vector{Card}
-    memory::Dict{T,Vector{Bool}}
+    memory::Dict{T,Vector{Symbol}}
+    card_counts::Dict{T,Int}
 end
 
-function Chris(;id, ids, kwargs...)
+function DFish(;id, ids, kwargs...)
     # card rank known for each player id
-    memory = Dict(id => fill(false, 13) for id ∈ ids)
-    return Chris(id, Card[], memory)
+    memory = Dict(id => fill(:unknown, 13) for id ∈ ids)
+    card_counts = Dict(id => 0 for id ∈ ids)
+    return DFish(id, Card[], memory, card_counts)
 end
 
-function setup!(player::Chris, ids)
+function setup!(player::DFish, ids)
+    # all players start with the same number of cards
+    n_cards = length(player.cards)
+    for id ∈ ids
+        player.card_counts[id] = n_cards
+    end
     return nothing
 end
 
-function process_exchange!(player::Chris, inquirer_id, opponent_id, value, cards)
-    player.memory[inquirer_id][value] = true
-    player.memory[opponent_id][value] = false
+function process_exchange!(player::DFish, inquirer_id, opponent_id, value, cards)
+    player.memory[inquirer_id][value] = :available
+    player.memory[opponent_id][value] = :unavailable
+    end
     return nothing
 end
 
-function process_books!(player::Chris, book_map)
+function process_books!(player::DFish, book_map)
     for (p,c) ∈ book_map
         i = c[1].rnk
         player.memory[p][i] = false
@@ -28,7 +36,7 @@ function process_books!(player::Chris, book_map)
     return nothing
 end
 
-function decide(player::Chris, ids)
+function decide(player::DFish, ids)
     player_id, card_rank = find_match(player, ids)
     if isempty(player_id)
         return guess(player, ids)
@@ -37,7 +45,7 @@ function decide(player::Chris, ids)
     end
 end
 
-function find_match(player::Chris, ids::T) where T
+function find_match(player::DFish, ids::T) where T
     (; memory) = player
     matching_card = Int[]
     matching_id = T()

@@ -10,7 +10,7 @@ As a common reference point, each agent is compared to a `Guesser` agent which r
 
 | Rank | Name  | Score      |
 |------|-------|------------|
-| 1    | Chris | 634 / 1000 |
+| 1    | Chris | 711 / 1000 |
 
 # Installation
 

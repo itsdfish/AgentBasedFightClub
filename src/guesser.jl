@@ -15,15 +15,8 @@ function setup!(player::Guesser, ids)
 end
 
 function process_exchange!(player::Guesser, inquirer_id, opponent_id, value, cards)
-    if isempty(cards)
-        # if no cards are exchanged, inquierer has a card with rank `value`, but the opponent does not
-        player.memory[inquirer_id][value] = true
-        player.memory[opponent_id][value] = false
-    else
-        # if cards are exchanged, inquierer no longer has a card with rank `value`, but the opponent does
-        player.memory[inquirer_id][value] = false
-        player.memory[opponent_id][value] = true
-    end
+    player.memory[inquirer_id][value] = true
+    player.memory[opponent_id][value] = false
     return nothing
 end
 
