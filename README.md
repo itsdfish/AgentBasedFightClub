@@ -2,6 +2,16 @@
 
 This repo hosts code for a Gladitorial death match between agents who compete in a brutal game of go fish.
 
+# Leader Board
+
+As a common reference point, each agent is compared to a `Guesser` agent which randomly guesses. 
+
+## Agent vs. Random Guesser
+
+| Rank | Name  | Score      |
+|------|-------|------------|
+| 1    | Chris | 634 / 1000 |
+
 # Installation
 
 Install the latest version of [Julia](https://julialang.org/downloads/).
@@ -26,6 +36,10 @@ As you work on your agent, you can commit changes to your fork optionally from t
 # Additional Information
 
 More information for go fish can be found in the README of [GoFish.jl](https://github.com/itsdfish/GoFish.jl)
+
+# Example
+
+See `src/guesser.jl` for a simple example of a custom agent which guesses. To run a battle against the Guesser agent, copy and modify `agent_vs_guesser_battles/run_battle_chris_vs_guesser.jl`.  
 
 
 

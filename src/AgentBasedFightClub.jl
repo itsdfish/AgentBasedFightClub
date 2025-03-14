@@ -5,17 +5,18 @@ module AgentBasedFightClub
     import GoFish: process_books! 
     import GoFish: setup!
     import GoFish: decide
+
     export Chris
     export Dad 
-    export Taylor 
+    export Guesser
     export Mary
-    export Example
+
     export battle!
+    export guess
 
     include("dad.jl")
     include("chris.jl")
-    include("taylor.jl")
     include("mary.jl")
-    include("example.jl")
+    include("guesser.jl")
     include("utilities.jl")
 end

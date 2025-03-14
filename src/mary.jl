@@ -27,5 +27,5 @@ end
 
 function decide(player::Mary, ids)
 
-    return id, value
+    return player_id, card_rank
 end
