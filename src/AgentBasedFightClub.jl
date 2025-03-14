@@ -11,14 +11,16 @@ module AgentBasedFightClub
     export DFish
     export Guesser
     export Mary
+    export Papi
 
     export battle!
     export guess
 
     include("dad.jl")
     include("chris.jl")
+    include("guesser.jl")
     include("dfish.jl")
     include("mary.jl")
-    include("guesser.jl")
+    include("papi.jl")
     include("utilities.jl")
 end

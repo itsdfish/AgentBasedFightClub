@@ -27,7 +27,7 @@ This will install a development copy in `.julia/dev` where you can create your a
 
 # Organization
 
-The folder `src` contains a template associated with your name where you can write your code. A simple example can be found in `src/example.jl`. An example for running the Gladetorial death match can be found in `sandbox/run_example.jl`. For the purpose of testing and development, you can make a copy of `run_example.jl` and modify it as needed for your purposes. 
+The folder `src` contains a template associated with your name where you can write your code. A simple example can be found in `src/guesser.jl`.
 
 # Submitting your Agent
 
